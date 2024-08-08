@@ -25,7 +25,7 @@ console.log('finalizando o fetch');
 
 }
 
-// função anônima sem arrow function
+// função anônima sem arrow function 
 function() {
 
 }
