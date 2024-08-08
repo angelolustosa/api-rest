@@ -37,7 +37,7 @@
 
 
 // 4 - Criar um recurso utilizando o REST API do jsonplaceholder
-fetch('https://jsonplaceholder.typicode.com/posts', {
+/* fetch('https://jsonplaceholder.typicode.com/posts', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
@@ -49,4 +49,40 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
     })
 })
     .then(response => response.json())
+    .then(json => console.log(JSON.stringify(json, null, 4) )) */
+
+// 5 - Atualizar o post com o id 54
+/* fetch('https://jsonplaceholder.typicode.com/posts/54', {
+    method: 'PUT',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+        userId: 10,
+        title: "Titulo Post atualizado",
+        body: "Body post atualizado!"
+    })
+})
+    .then(response => response.json())
+    .then(json => console.log(JSON.stringify(json, null, 4) ))     */
+
+
+ // 6 - Atualizar o post com o id 54
+fetch('https://jsonplaceholder.typicode.com/posts/54', {
+    method: 'PATCH',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+        title: "Titulo Post atualizado",
+    })
+})
+    .then(response => response.json())
     .then(json => console.log(JSON.stringify(json, null, 4) ))
+
+// 7 - Deletar o post com o id 22
+fetch('https://jsonplaceholder.typicode.com/posts/22', {
+    method: 'DELETE',
+})
+.then(response => response.json())
+.then(json => console.log(JSON.stringify(json, null, 4) ))
